@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/Quiz.css">
+    <title>Quiz - Informatique & Génie Logiciel</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Mahmoud</a>
+    <nav>
+      <a href="../index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Compétences</a>
+            <a href="experience.html">Experience</a>
+            <a href="matière.html">Matières</a>
+            <a href="passion.html">Passions</a>
+            <a href="Quiz.html" class="active">Quiz</a>
+            <a href="contact.html">Contact</a>
+            <a href="temoignages.html">Témoignages</a>
+        </nav>
+    </header>
+
+    <main class="quiz-container">
+        <section class="quiz-hero">
+            <h1>Quiz <span>Informatique</span></h1>
+            <p>Testez vos connaissances en programmation et génie logiciel</p>
+            <p class="quiz-info">15 questions • Durée estimée : 10 minutes</p>
+        </section>
+
+        <div class="quiz-wrapper">
+            <form id="quizForm" class="quiz-form">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 1</span>
+                        <span class="question-progress">1/15</span>
+                    </div>
+                    <h3>Quel langage de programmation est le plus utilisé pour le web backend ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="a" />
+                            <span>Python</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="b" />
+                            <span>PHP</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="c" />
+                            <span>JavaScript (Node.js)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="d" />
+                            <span>C++</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 2</span>
+                        <span class="question-progress">2/15</span>
+                    </div>
+                    <h3>Qu'est-ce qu'une base de données relationnelle ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="a" />
+                            <span>Une base qui stocke des fichiers texte</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="b" />
+                            <span>Une base organisée en tables avec relations entre elles</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="c" />
+                            <span>Une base stockée uniquement en mémoire</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="d" />
+                            <span>Une base utilisée uniquement pour les images</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 3</span>
+                        <span class="question-progress">3/15</span>
+                    </div>
+                    <h3>Quel est le but principal du pattern MVC ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a" />
+                            <span>Compresser le code</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b" />
+                            <span>Séparer la présentation, la logique métier et les données</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c" />
+                            <span>Augmenter la vitesse d'exécution</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="d" />
+                            <span>Réduire la mémoire utilisée</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 4</span>
+                        <span class="question-progress">4/15</span>
+                    </div>
+                    <h3>Quelle est la complexité temporelle de la recherche binaire ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="a" />
+                            <span>O(n)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="b" />
+                            <span>O(log n)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="c" />
+                            <span>O(n²)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="d" />
+                            <span>O(1)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 5</span>
+                        <span class="question-progress">5/15</span>
+                    </div>
+                    <h3>Quel framework web Python est le plus populaire ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a" />
+                            <span>Django</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b" />
+                            <span>Flask</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c" />
+                            <span>FastAPI</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="d" />
+                            <span>Tous les trois sont équalement populaires</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 6</span>
+                        <span class="question-progress">6/15</span>
+                    </div>
+                    <h3>Qu'est-ce que Git ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="a" />
+                            <span>Un système de gestion de versions décentralisé</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="b" />
+                            <span>Un langage de programmation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="c" />
+                            <span>Un framework web</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="d" />
+                            <span>Une base de données</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 7</span>
+                        <span class="question-progress">7/15</span>
+                    </div>
+                    <h3>Quel est le principe de SOLID qui stipule qu'une classe doit avoir une seule responsabilité ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="a" />
+                            <span>Open/Closed Principle</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="b" />
+                            <span>Single Responsibility Principle</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="c" />
+                            <span>Liskov Substitution Principle</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="d" />
+                            <span>Interface Segregation Principle</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 8</span>
+                        <span class="question-progress">8/15</span>
+                    </div>
+                    <h3>Qu'est-ce qu'une API REST ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q8" value="a" />
+                            <span>Un interface pour accéder à des ressources web via HTTP</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="b" />
+                            <span>Un langage de programmation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="c" />
+                            <span>Un système d'exploitation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="d" />
+                            <span>Un navigateur web</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 9</span>
+                        <span class="question-progress">9/15</span>
+                    </div>
+                    <h3>Quel est le port par défaut pour HTTP ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="a" />
+                            <span>21</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="b" />
+                            <span>80</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="c" />
+                            <span>443</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="d" />
+                            <span>3306</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 10</span>
+                        <span class="question-progress">10/15</span>
+                    </div>
+                    <h3>Qu'est-ce que le responsive design ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10" value="a" />
+                            <span>La capacité d'un site à s'adapter à différentes tailles d'écran</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="b" />
+                            <span>Un langage de programmation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="c" />
+                            <span>Un type de base de données</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="d" />
+                            <span>Un framework CSS</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 11</span>
+                        <span class="question-progress">11/15</span>
+                    </div>
+                    <h3>Quel est l'objectif principal du Machine Learning ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q11" value="a" />
+                            <span>Permettre aux machines d'apprendre sans être explicitement programmées</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="b" />
+                            <span>Remplacer les programmeurs</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="c" />
+                            <span>Augmenter la vitesse des processeurs</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="d" />
+                            <span>Créer des interfaces utilisateur</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 12</span>
+                        <span class="question-progress">12/15</span>
+                    </div>
+                    <h3>Qu'est-ce que Docker ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q12" value="a" />
+                            <span>Une plateforme de conteneurisation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="b" />
+                            <span>Un éditeur de code</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="c" />
+                            <span>Un système d'exploitation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="d" />
+                            <span>Un langage de programmation</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 13</span>
+                        <span class="question-progress">13/15</span>
+                    </div>
+                    <h3>Quel est le protocole de sécurité pour les connexions web ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q13" value="a" />
+                            <span>HTTP</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="b" />
+                            <span>FTP</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="c" />
+                            <span>HTTPS</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="d" />
+                            <span>SMTP</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 14</span>
+                        <span class="question-progress">14/15</span>
+                    </div>
+                    <h3>Qu'est-ce que l'Agile en génie logiciel ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q14" value="a" />
+                            <span>Une méthodologie de développement itérative et flexible</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="b" />
+                            <span>Un langage de programmation</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="c" />
+                            <span>Un framework web</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="d" />
+                            <span>Un système de base de données</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 15</span>
+                        <span class="question-progress">15/15</span>
+                    </div>
+                    <h3>Quel langage est idéal pour les algorithmes et structures de données ?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q15" value="a" />
+                            <span>C</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="b" />
+                            <span>Python</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="c" />
+                            <span>Java</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="d" />
+                            <span>Tous les trois</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-check-circle"></i> Valider le Quiz
+                </button>
+            </form>
+
+            <!-- Résultats -->
+            <div id="results" class="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2>Résultats du Quiz</h2>
+                    <div class="score-circle">
+                        <div class="score-text">
+                            <span id="scoreValue">0</span>%
+                        </div>
+                        <svg class="score-ring" width="200" height="200">
+                            <circle cx="100" cy="100" r="90" class="score-ring-background" />
+                            <circle cx="100" cy="100" r="90" class="score-ring-progress" id="scoreRing" />
+                        </svg>
+                    </div>
+                    <p id="scoreMessage" class="score-message"></p>
+                </div>
+
+                <div class="answers-review">
+                    <h3>Révision des réponses</h3>
+                    <div id="answersList"></div>
+                </div>
+
+                <button class="btn-restart" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Recommencer le Quiz
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/Quiz.js"></script>
+</body>
+</html>

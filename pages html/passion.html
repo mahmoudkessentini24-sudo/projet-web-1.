@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/passion.css">
+  <title>Passions - Mahmoud</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">Mahmoud</a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Compétences</a>
+      <a href="experience.html">Experience</a>
+      <a href="matière.html">Matières</a>
+      <a href="passion.html" class="active">Passions</a>
+      <a href="Quiz.html">Quiz</a>
+      <a href="contact.html">Contact</a>
+      <a href="temoignages.html">Témoignages</a>
+    </nav>
+  </header>
+
+  <main class="passions-container">
+    <section class="hero">
+      <h1>Mes <span>Passions</span></h1>
+      <p>Sports, loisirs et qualités qui me définissent</p>
+    </section>
+
+    <section class="sports-grid">
+      <article class="sport-card" data-img="Football.jpg">
+        <div class="sport-thumb"><img src="../images/Football.jpg" alt="Football"></div>
+        <h3>Football</h3>
+        <p>Jeu d'équipe, endurance et stratégie — passion depuis l'enfance.</p>
+      </article>
+
+      <article class="sport-card" data-img="Tennis.jpg">
+        <div class="sport-thumb"><img src="../images/Tennis.jpg" alt="Tennis"></div>
+        <h3>Tennis</h3>
+        <p>Précision, concentration et compétition amicale.</p>
+      </article>
+
+      <article class="sport-card" data-img="Padel.jpg">
+        <div class="sport-thumb"><img src="../images/Padel.jpg" alt="Padel"></div>
+        <h3>Padel</h3>
+        <p>Rapide, social et tactique — parfait pour se détendre en équipe.</p>
+      </article>
+
+      <article class="sport-card" data-img="Pingpong.jpg">
+        <div class="sport-thumb"><img src="../images/Pingpong.jpg" alt="Ping-Pong"></div>
+        <h3>Ping-pong</h3>
+        <p>Réflexes rapides et micro-stratégie.</p>
+      </article>
+    </section>
+
+    <section class="hobbies">
+      <div class="hobby-left">
+        <h2>Jeux de cartes</h2>
+        <p>Belote, Rami, Chkoba — j'aime la convivialité, la stratégie et le bluff.</p>
+        <div class="card-logos">
+          <img src="../images/cards.jpg" alt="jeux de cartes">
+        </div>
+      </div>
+
+      <div class="qualities">
+        <h2>Mes qualités</h2>
+        <ul>
+          <li><span class="badge"><i class="fas fa-lightbulb"></i></span> Créativité & résolution de problèmes</li>
+          <li><span class="badge"><i class="fas fa-users"></i></span> Travail en équipe & communication</li>
+          <li><span class="badge"><i class="fas fa-clock"></i></span> Persévérance & gestion du temps</li>
+          <li><span class="badge"><i class="fas fa-star"></i></span> Esprit d'initiative</li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+  <div id="modal" class="modal">
+    <span id="close" class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="">
+    <div id="caption" class="modal-caption"></div>
+  </div>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in-view'); });
+    }, {threshold: 0.15});
+    document.querySelectorAll('.sport-card, .qualities, .gallery-grid img').forEach(el => io.observe(el));
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const caption = document.getElementById('caption');
+    const closeBtn = document.getElementById('close');
+
+    document.querySelectorAll('.gallery-grid img, .sport-card').forEach(el=>{
+      el.addEventListener('click', (e)=>{
+        const src = el.tagName === 'IMG' ? el.src : el.dataset.img;
+        modal.style.display = 'block';
+        modalImg.src = src;
+        caption.textContent = el.alt || '';
+      });
+    });
+
+    closeBtn.onclick = ()=> modal.style.display='none';
+    modal.onclick = (e)=> { if(e.target===modal) modal.style.display='none'; };
+  </script>
+</body>
+</html>

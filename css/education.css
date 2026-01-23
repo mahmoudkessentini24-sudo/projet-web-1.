@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{ 
+    font-size: 62.5%; 
+}
+
+body{ 
+    background: #000; 
+    color: #fff; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: rgb(210, 210, 147);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active{
+    color: rgb(210, 210, 147);
+    border-bottom: 3px solid rgb(210, 210, 147);
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(210, 210, 147);
+        border-bottom: 3px solid rgb(210, 210, 147);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(210, 210, 147);
+    }
+}
+
+.academic-container{
+    padding: 8rem 9% 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero{
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero h1 span{
+    color: rgb(210, 210, 147);
+}
+
+.hero p{
+    font-size: 1.6rem;
+    color: #bbb;
+}
+
+/* Timeline */
+.academic-timeline{
+    position: relative;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.timeline-line{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, rgb(210, 210, 147), transparent);
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.timeline-card{
+    position: relative;
+    margin-bottom: 3rem;
+    width: 45%;
+    animation: slideInUp 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.timeline-card.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left-card{ 
+    margin-left: 0; 
+    text-align: right; 
+}
+
+.right-card{ 
+    margin-left: auto; 
+    text-align: left; 
+}
+
+.timeline-dot{
+    position: relative;
+    left: 50%;
+    top: 2rem;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    background: #000;
+    border: 3px solid rgb(210, 210, 147);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(210, 210, 147);
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(210, 210, 147, 0.4);}
+
+.timeline-dot.active{
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.card-content{
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid rgba(210, 210, 147, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: 0.3s ease;
+}
+
+.card-content:hover{
+    border-color: rgb(210, 210, 147);
+    box-shadow: 0 10px 30px rgba(210, 210, 147, 0.2);
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header h3{
+    font-size: 1.8rem;
+    color: rgb(210, 210, 147);
+}
+
+.year{
+    background: rgba(210, 210, 147, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.institution{
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.description{
+    font-size: 1.4rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.diploma-badge{
+    display: inline-block;
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.diploma-image{
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+}
+
+.diploma-image img{
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.diploma-image img:hover{
+    transform: scale(1.05);
+}
+
+.subjects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.subject-tag{
+    background: rgba(210, 210, 147, 0.1);
+    border: 1px solid rgb(210, 210, 147);
+    color: rgb(210, 210, 147);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+.progress-container{
+    margin-top: 1.5rem;
+}
+
+.progress-label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.progress-percent{
+    color: rgb(210, 210, 147);
+    font-weight: 600;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 1rem;
+    background: rgba(210, 210, 147, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgb(210, 210, 147);
+}
+
+.progress-fill{
+    height: 100%;
+    background: linear-gradient(90deg, rgb(210, 210, 147), #ffeb3b);
+    border-radius: 1rem;
+    transition: width 1.5s ease;
+}
+
+/* Skills by level */
+.skills-by-level{
+    margin: 4rem 0;
+}
+
+.skills-by-level h2{
+    font-size: 2.5rem;
+    color: rgb(210, 210, 147);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skill-level-card{
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-left: 4px solid rgb(210, 210, 147);
+    border-radius: 1rem;
+    padding: 2rem;
+    animation: slideInUp 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.skill-level-card.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-level-card h4{
+    color: rgb(210, 210, 147);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.skill-level-card ul{
+    list-style: none;
+}
+
+.skill-level-card li{
+    padding: 0.8rem 0;
+    color: #ddd;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(210, 210, 147, 0.1);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.skill-level-card li:before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(210, 210, 147);
+    font-weight: bold;
+}
+
+/* Certifications */
+.certifications{
+    margin: 4rem 0;
+}
+
+.certifications h2{
+    font-size: 2.5rem;
+    color: rgb(210, 210, 147);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.certifications-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-card{
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    border: 2px solid rgba(210, 210, 147, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    animation: slideInUp 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.3s ease;
+}
+
+.cert-card.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cert-card:hover{
+    border-color: rgb(210, 210, 147);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(210, 210, 147, 0.2);
+}
+
+.cert-icon{
+    font-size: 3rem;
+    color: rgb(210, 210, 147);
+    margin-bottom: 1rem;
+}
+
+.cert-card h4{
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.cert-card p{
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cert-date{
+    display: inline-block;
+    background: rgba(210, 210, 147, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Statistics */
+.academic-stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid rgb(210, 210, 147);
+    border-radius: 1.5rem;
+}
+
+.stat-box{
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number{
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(210, 210, 147);
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p{
+    font-size: 1.3rem;
+    color: #ddd;
+}
+
+/* Modal */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-close{
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.modal-content{
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInDown{
+    from{ 
+        opacity: 0; 
+        transform: translateY(-30px); 
+    }
+    to{ 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideInUp{
+    from{ 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to{ 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes pulse{
+    0%, 100%{ 
+        box-shadow: 0 0 20px rgba(210, 210, 147, 0.4); 
+    }
+    50%{ 
+        box-shadow: 0 0 40px rgba(210, 210, 147, 0.8); 
+    }
+}
+
+/* Responsive */
+@media(max-width: 1024px){
+    .timeline-line{ 
+        left: 1.5rem; 
+    }
+    
+    .timeline-card{
+        width: 100%;
+        margin-left: 5.5rem !important;
+        text-align: left !important;
+    }
+    
+    .left-card, 
+    .right-card{ 
+        text-align: left; 
+    }
+    
+    .timeline-dot{ 
+        left: 1.5rem; 
+    }
+}
+
+@media(max-width: 995px){
+    .academic-container{ 
+        padding: 8rem 4% 2rem; 
+    }
+
+    .hero h1{ 
+        font-size: 2.5rem; 
+    }
+
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(210, 210, 147);
+        border-bottom: 3px solid rgb(210, 210, 147);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(210, 210, 147);
+    }
+
+    .card-header{ 
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .year{ 
+        margin-top: 0.5rem; 
+    }
+}
+
+@media(max-width: 768px){
+    .academic-container{ 
+        padding: 8rem 4% 2rem; 
+    }
+
+    .hero h1{ 
+        font-size: 2.5rem; 
+    }
+
+    nav a{ 
+        margin-left: 1.5rem; 
+        font-size: 1.3rem; 
+    }
+
+    .card-header{ 
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .year{ 
+        margin-top: 0.5rem; 
+    }
+}
+
+@media(max-width: 480px){
+    .academic-container{ 
+        padding: 6rem 3% 1rem; 
+    }
+
+    .hero h1{ 
+        font-size: 1.8rem; 
+    }
+
+    .timeline-line{ 
+        left: 1rem; 
+    }
+
+    .timeline-card{ 
+        margin-left: 4.5rem !important; 
+    }
+
+    .timeline-dot{ 
+        left: 1rem; 
+        width: 4rem; 
+        height: 4rem; 
+        font-size: 1.5rem; 
+    }
+}

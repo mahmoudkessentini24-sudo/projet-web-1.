@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: rgb(210, 210, 147);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: rgb(210, 210, 147);
+    border-bottom: 3px solid rgb(210, 210, 147);
+}
+
+@media(max-width: 995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(210, 210, 147);
+        border-bottom: 3px solid rgb(210, 210, 147);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(210, 210, 147);
+    }
+}
+
+.container{
+    padding: 9rem 6% 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.courses-hero{
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.courses-hero h1{
+    font-size: 3.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.courses-hero h1 span{
+    color: rgb(210, 210, 147);
+}
+
+.courses-hero p{
+    color: #bbb;
+    font-size: 1.6rem;
+}
+
+.courses-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.6rem;
+    margin-bottom: 3.5rem;
+}
+
+.course-card{
+    background: linear-gradient(135deg, #111, #1b1b1b);
+    border-radius: 12px;
+    padding: 1.8rem;
+    min-height: 160px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.2, 0.9, 0.3, 1);
+    border: 2px solid rgba(210, 210, 147, 0.1);
+}
+
+.course-card.in-view{
+    transform: none;
+    opacity: 1;
+}
+
+.course-card:hover{
+    border-color: rgb(210, 210, 147);
+    box-shadow: 0 10px 30px rgba(210, 210, 147, 0.2);
+}
+
+.course-icon{
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: rgba(210, 210, 147, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(210, 210, 147);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 18px rgba(210, 210, 147, 0.08);
+}
+
+.course-card h3{
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    color: #fff;
+}
+
+.course-card p{
+    color: #cfcfcf;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.projects{
+    margin-top: 4rem;
+}
+
+.projects h2{
+    font-size: 2.4rem;
+    color: rgb(210, 210, 147);
+    margin-bottom: 1.2rem;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+.project-card{
+    background: linear-gradient(135deg, #0f0f0f, #171717);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s;
+    border: 2px solid rgba(210, 210, 147, 0.1);
+}
+
+.project-card.in-view{
+    transform: none;
+    opacity: 1;
+}
+
+.project-card:hover{
+    border-color: rgb(210, 210, 147);
+    box-shadow: 0 10px 30px rgba(210, 210, 147, 0.2);
+}
+
+.project-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s;
+}
+
+.project-card:hover img{
+    transform: scale(1.06);
+}
+
+.project-info{
+    padding: 1rem 1.2rem;
+}
+
+.project-info h4{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-info p{
+    color: #cfcfcf;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-tags span{
+    display: inline-block;
+    background: rgba(210, 210, 147, 0.08);
+    color: rgb(210, 210, 147);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes glow{
+    0%{
+        filter: drop-shadow(0 0 0 rgba(210, 210, 147, 0));
+    }
+    50%{
+        filter: drop-shadow(0 0 18px rgba(210, 210, 147, 0.6));
+    }
+    100%{
+        filter: drop-shadow(0 0 0 rgba(210, 210, 147, 0));
+    }
+}
+
+.courses-hero h1{
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* Responsive */
+@media(max-width: 995px){
+    header{
+        padding: 1rem 4%;
+    }
+
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(210, 210, 147);
+        border-bottom: 3px solid rgb(210, 210, 147);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(210, 210, 147);
+    }
+}
+
+@media(max-width: 768px){
+    .container{
+        padding: 8rem 4% 4rem;
+    }
+
+    .courses-hero h1{
+        font-size: 2.4rem;
+    }
+
+    .course-card p,
+    .project-info p{
+        font-size: 1.1rem;
+    }
+
+    .courses-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .projects-grid{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media(max-width: 480px){
+    .container{
+        padding: 7rem 3% 2rem;
+    }
+
+    .courses-hero h1{
+        font-size: 1.8rem;
+    }
+
+    .courses-grid{
+        gap: 1rem;
+    }
+
+    .projects-grid{
+        gap: 1rem;
+    }
+
+    .project-card img{
+        height: 120px;
+    }
+}

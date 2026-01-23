@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/temoignages.css">
+  <title>Témoignage - IIT</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo">Mahmoud</a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Compétences</a>
+      <a href="experience.html">Experience</a>
+      <a href="matière.html">Matières</a>
+      <a href="passion.html">Passions</a>
+      <a href="Quiz.html">Quiz</a>
+      <a href="contact.html">Contact</a>
+      <a href="temoignages.html" class="active">Témoignages</a>
+    </nav>
+  </header>
+
+  <main class="temoignage-container">
+    <section class="hero">
+      <h1>Mon <span>Témoignage</span> sur l'IIT</h1>
+      <p>Retour d'expérience personnel : formation, projets et impact sur ma carrière.</p>
+    </section>
+
+    <section class="temoignages">
+      <article class="card">
+        <div class="quote">« L'IIT m'a donné les outils et la rigueur nécessaires pour concevoir des projets réels. »</div>
+        <div class="meta"><strong>Mahmoud K.</strong> — Étudiant en Génie Logiciel, 2025/2026</div>
+      </article>
+
+      <article class="card">
+        <div class="quote">« Encadrement de qualité, projets concrets et réseau professionnel très utile. »</div>
+        <div class="meta"><strong>Mahmoud K.</strong> — Étudiant en Génie Logiciel, 2025/2026</div>
+      </article>
+    </section>
+
+    <section class="cta">
+      <p>Vous voulez en savoir plus ? <a href="contact.html">Contactez‑moi</a> pour discuter de mon expérience à l'IIT.</p>
+    </section>
+  </main>
+
+  <script>
+    // simple reveal on scroll (adds .in-view)
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('in-view');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.card, .hero').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
